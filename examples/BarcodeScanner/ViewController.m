@@ -142,14 +142,16 @@
 
 #pragma mark - ZXCaptureDelegate Methods
 
-- (void)captureResult:(ZXCapture*)capture result:(ZXResult*)result {
-  if (result) {
-    // We got a result. Display information about the result onscreen.
-    [self.decodedLabel performSelectorOnMainThread:@selector(setText:) withObject:[self displayForResult:result] waitUntilDone:YES];
+- (void)captureResult:(ZXCapture*)capture result:(ZXResult*)result
+{
+	if (result)
+	{
+		// We got a result. Display information about the result onscreen.
+		[self.decodedLabel performSelectorOnMainThread:@selector(setText:) withObject:[self displayForResult:result] waitUntilDone:YES];
 
-    // Vibrate
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-  }
+		// Vibrate
+		AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+	}
 }
 
 - (void)captureSize:(ZXCapture*)capture width:(NSNumber*)width height:(NSNumber*)height {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import "ZXAztecWriter.h"
+//#import "ZXAztecWriter.h"
 #import "ZXBitMatrix.h"
 #import "ZXCodaBarWriter.h"
 #import "ZXCode39Writer.h"
@@ -79,10 +79,6 @@
 
     case kBarcodeFormatDataMatrix:
       writer = [[[ZXDataMatrixWriter alloc] init] autorelease];
-      break;
-
-    case kBarcodeFormatAztec:
-      writer = [[[ZXAztecWriter alloc] init] autorelease];
       break;
 
     default:

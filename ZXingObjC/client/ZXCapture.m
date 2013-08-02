@@ -240,12 +240,12 @@ static bool isIPad();
           isIPad() &&
           &AVCaptureSessionPresetiFrame960x540 != nil &&
           [zxd supportsAVCaptureSessionPreset:AVCaptureSessionPresetiFrame960x540]) {
-        // NSLog(@"960");
+        NSLog(@"960");
         preset = AVCaptureSessionPresetiFrame960x540;
       }
       if (!preset) {
-        // NSLog(@"MED");
-        preset = AVCaptureSessionPresetMedium;
+        NSLog(@"Session HIGH");
+        preset = AVCaptureSessionPresetHigh;
       }
       session.sessionPreset = preset;
     });
